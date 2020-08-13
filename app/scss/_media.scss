@@ -1,0 +1,251 @@
+@media (max-width: 1680px){
+  .questions-information__wrapper{
+    flex-direction: column;
+  }
+  .information {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1280px){
+  .bottom-header{
+    &__social,
+    a.button{
+      display: none;
+    }
+  }
+}
+@media (max-width: 1024px){
+  /*start shares*/
+  .slider-shares{
+    .slick-arrow{
+      bottom: 4%;
+      left: 10px;
+    }
+    .slick-arrow.slick-next{
+      left: 72px;
+    }
+    .button2{
+      margin: 10px 0 0 0;
+    }
+  }
+  /*end shares*/
+  /*start stepwise*/
+  .stepwise__inner{
+    justify-content: center;
+  }
+  .item-stepwise{
+    flex: 0 0 45%;
+    &::before{
+      content: none;
+    }
+  }
+  /*end stepwise*/
+  /*start order*/
+  .order{
+    &__title{
+      display: none;
+    }
+  }
+  /*end order*/
+  /*start about*/
+  .about__inner{
+    padding-top: 50px;
+    flex-direction: column;
+  }
+  .info-about{
+    margin: 0 0 30px 0;
+    flex: 1 1 auto;
+  }
+  /*end about*/
+  .item-counter{
+    flex: 0 0 50%;
+  }
+  .footer__inner{
+    align-self: center;
+    flex-wrap: wrap;
+  }
+  .column-footer{
+    margin-bottom: 15px;
+    flex: 1 0 45%;
+  }
+  .column-footer:nth-child(2){
+    flex: 2 0 45%;
+  }
+  .header{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .top-header{
+    display: none;
+  }
+}
+
+@media (max-width: 768px){
+  .header__burger{
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    span{
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      top: 9px;
+      background-color: $red;
+      transition: all .3s;
+    }
+    &:before,
+    &:after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      background-color: $red;
+      transition: all .3s;
+    }
+    &:before{
+      top: 0;
+    }
+    &:after{
+      bottom: 0;
+    }
+  }
+  .header__burger.active:before{
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .header__burger.active:after{
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+  .header__burger.active span{
+    transform: scale(0);
+  }
+  .menu{
+    position: absolute;
+    display: none;
+    background-color: rgba(#d3e3f0, 0.9);
+    top: 93px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    text-align: center;
+    li{
+      display: block;
+      border-bottom: 2px solid #fff;
+      &+li{
+        padding-left: 0;
+      }
+    }
+    a{
+      font-size: 18px;
+      line-height: 37px;
+    }
+  }
+  
+  .title{
+    margin-bottom: 15px;
+    font-size: 32px;
+    text-align: center;
+  }
+  /*start routes*/
+  .routes__title-wrapper{
+    flex-direction: column;
+  }
+  .routes__inner{
+    margin: 0px;
+  }
+  .item-routes{
+    margin: 0px 0px 40px;
+    flex: 0 0 100%;
+  }
+  /*start routes*/
+  .benefits__title{
+    margin-bottom: 50px;
+  }
+  .benefits__inner{
+    margin: 0;
+    justify-content: start;
+  }
+  .item-benefits{
+    margin: 0 0 40px;
+    flex: 0 0 100%;
+    align-items: center;
+    text-align: center;
+  }
+  /*start order*/
+  .order{
+    padding: 39px 10px 31px 10px;
+    .button{
+      flex: 0 0 47px;
+    }
+    label:first-child{
+      margin-left: 0;
+    }
+  }
+  .order-form{
+    &__row{
+      flex-direction: column;
+    }
+    &__input{
+      margin:0 0 10px 0;
+      width: 100%;
+    }
+  }
+  /*end order*/
+  /*start about*/
+  .slider-about{
+    max-width: 310px;
+    &__item{
+      width: 310px;
+    }
+    &__images{
+      min-width: 0%;
+      max-width: 310px;
+    }
+    &__img{
+      height: 150px;
+    }
+  }
+  /*end about*/
+  /*start questions*/
+  .questions__inner{
+    margin: 0 0 10px 0;
+  }
+  .information::after{
+    display: none;
+  }
+  .slider-information{
+    max-width: 300px;
+    &__item{
+      max-width: 285px;
+    }
+    &__info{
+      padding: 15px 10px 15px 10px;
+    }
+  }
+  /*end questions*/
+  /*start recal*/
+  .recall__title-wrapper{
+    flex-direction: column;
+  }
+  .slider-recall__item{
+    max-width: 300px;
+    padding: 10px 15px 15px 18px;
+  }
+   /*start recal*/
+   .item-counter{
+    flex: 0 0 100%;
+  }
+}
+
+
+@media (min-width: 768px){
+  .menu{
+    display: block !important;
+  }
+}

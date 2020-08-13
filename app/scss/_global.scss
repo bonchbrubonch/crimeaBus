@@ -1,0 +1,126 @@
+html{
+  box-sizing: border-box;
+}
+
+*,*::before, *::after{
+  box-sizing: inherit;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  margin: 0;
+  font-size: inherit;
+}
+
+body{
+  color: $text;
+  @extend %mont-regular;
+  font-size: 13px;
+}
+
+.container{
+  max-width: 1220px;
+  padding: 0px 10px;
+  margin: 0 auto;
+}
+
+.button,
+.button2{
+  height: 47px;
+  display: inline-block;
+  @extend %mont-bold;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: all .2s;
+  border-radius: 5px;
+  text-align: center;
+}
+.button{
+  padding: 16px 55px;
+  background-color: $red;
+  &:hover{
+    background-color: #f84857;
+  }
+}
+.button2{
+  min-width: 267px;
+  position: relative;
+  padding: 16px 14px 16px 59px;
+  background-color: #8aa6bd;
+  &::before{
+    content: "";
+    position: absolute;
+    background-image: url("../images/navigation.png");
+    height: 24px;
+    width: 24px;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &:hover{
+    background-color: #a1c7e6;
+  }
+}
+
+.title{
+  color: $text;
+  @extend %mont-semibold;
+  font-size: 35px;
+  line-height: 42px;
+  text-transform: uppercase;
+}
+.reviews{
+  margin-left: 15px;
+  @extend %mont-semibold;
+  font-size: 11px;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.slider-about .slick-arrow,
+.slider-information .slick-arrow,
+.slider-recall .slick-arrow{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  font-size: 0; 
+  width: 6px;
+  height: 10px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.slider-about .slick-arrow.slick-prev,
+.slider-information .slick-arrow.slick-prev,
+.slider-recall .slick-arrow.slick-prev{
+  right: 60px;
+  background: url('../images/about-arrow.png') center / contain no-repeat;
+}
+.slider-about .slick-arrow.slick-next,
+.slider-information .slick-arrow.slick-next,
+.slider-recall .slick-arrow.slick-next{
+  background: url('../images/about-arrow.png') center/ contain no-repeat;
+  transform: rotate(180deg);
+}
+.slick-slide {
+  outline: none
+}
+
